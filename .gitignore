@@ -1,0 +1,12 @@
+
+*.vsidx
+
+.vs/OnlyPics4Life_Frontend/v17/
+
+.vs/OnlyPics4Life_WebApp/v17/.wsuo
+/.vs/OnlyPics4Life_WebApp/v17/DocumentLayout.json
+/onlypics4life_frontend/obj/Debug/onlypics4life_frontend.esproj.CoreCompileInputs.cache
+/onlypics4life_frontend/onlypics4life_frontend.esproj.user
+/onlypics4life_frontend/package-lock.json
+/onlypics4life_frontend/obj/Debug/onlypics4life_frontend.esproj.FileListAbsolute.txt
+/.vs/VSWorkspaceState.json
