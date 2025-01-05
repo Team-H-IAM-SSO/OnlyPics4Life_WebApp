@@ -23,7 +23,9 @@ function App() {
                 />
             </div>
             <header>
-                <h1>Welcome to <span className="app-name">OnlyPics4Life</span></h1>
+                <h1>
+                    Welcome to <span className="app-name">OnlyPics4Life</span>
+                </h1>
                 <p>Your secure solution for sharing and managing photos.</p>
             </header>
 
