@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const navigate = useNavigate();
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const handleGoToLogin = () => {
+        navigate("/login"); 
+    };
+
+    return (
+        <div className="home-page">
+            <div className="logo-container">
+                {/* Logo bovenaan */}
+                <img
+                    src="/Onlypics4life.png"
+                    alt="OnlyPics4Life Logo"
+                    className="app-logo"
+                />
+            </div>
+            <header>
+                <h1>
+                    Welcome to <span className="app-name">OnlyPics4Life</span>
+                </h1>
+                <p>Your secure solution for sharing and managing photos.</p>
+            </header>
+            <div className="button-section">
+                <button onClick={handleGoToLogin} className="go-to-login-btn">
+                    Go to Login
+                </button>
+            </div>
+        </div>
+    );
 }
 
-export default App
+export default App;
