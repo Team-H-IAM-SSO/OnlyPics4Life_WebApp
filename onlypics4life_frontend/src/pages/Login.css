@@ -1,12 +1,54 @@
+/* Login-pagina layout */
 .login-page {
+    height: 100vh; /* Zorgt voor volledige schermhoogte */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column; /* Kolomindeling zodat de container en knop gestapeld zijn */
+    justify-content: center; /* Verticaal centreren */
+    align-items: center; /* Horizontaal centreren */
     background-color: #f5f5f5;
 }
 
-.login-container {
+/* Login container */
+.login-container,
+.id-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Ruimte tussen de container en de knop */
+}
+
+/* Knop onder de container */
+.switch-btn-wrapper {
+    text-align: center; /* Tekst en knop gecentreerd */
+    margin-top: 10px; /* Ruimte boven de tekst */
+}
+
+.switch-btn-text {
+    font-size: 1rem;
+    color: #5e5e5e;
+    margin-bottom: 10px;
+}
+
+.switch-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+    .switch-btn:hover {
+        background-color: #333; /* Donkerder zwart bij hover */
+    }
+
+/* Login-container styling */
+.login-container,
+.id-container {
     text-align: center;
     background-color: #ffffff;
     padding: 2rem;
@@ -14,12 +56,16 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-    .login-container h1 {
+    /* Login container koptekst */
+    .login-container h1,
+    .id-container h1 {
         margin-bottom: 1rem;
         color: #5e5e5e;
     }
 
-.login-input {
+/* Input velden */
+.login-input,
+.id-input {
     display: block;
     width: 250px;
     margin: 10px auto;
@@ -28,7 +74,9 @@
     border-radius: 4px;
 }
 
-.login-btn {
+/* Login knop */
+.login-btn,
+.id-btn {
     margin-top: 1rem;
     padding: 10px 20px;
     background-color: #7a8c8d;
@@ -39,6 +87,36 @@
     transition: background-color 0.3s;
 }
 
-    .login-btn:hover {
+    .login-btn:hover,
+    .id-btn:hover {
         background-color: #5e5e5e;
     }
+
+/* ID specifieke container */
+.id-container {
+    background-color: #f0f8ff; /* Lichtblauwe achtergrond */
+}
+
+/* Auth0 sectie styling */
+.auth0-section {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.auth0-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed; /* Geeft visueel aan dat de knop niet actief is */
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    opacity: 0.6;
+}
+
+.auth0-section p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #5e5e5e;
+}

@@ -1,0 +1,153 @@
+/* Algemene styling voor de fotograaf pagina */
+.photographer-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+/* Album overzicht */
+.album-overview {
+    margin-top: 20px;
+}
+
+    .album-overview h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        transition: color 0.3s ease;
+    }
+
+/* Album lijst styling */
+.album-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.album-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .album-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .album-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: #007bff;
+        transition: color 0.3s ease;
+    }
+
+    .album-item p {
+        font-size: 0.9rem;
+        color: #666;
+        transition: color 0.3s ease;
+    }
+
+/* Acties voor albums */
+.album-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.generate-code-btn,
+.upload-photo-btn,
+.add-album-btn,
+.save-btn,
+.cancel-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .generate-code-btn:hover,
+    .upload-photo-btn:hover,
+    .add-album-btn:hover,
+    .save-btn:hover,
+    .cancel-btn:hover {
+        transform: scale(1.05);
+    }
+
+/* Album formulier */
+.add-album-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Smooth Transition for Hidden Elements */
+.add-album-form {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+}
+
+    .add-album-form.active {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+/* Album invoervelden */
+.album-input,
+.album-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .album-input:focus,
+    .album-textarea:focus {
+        border-color: #007bff;
+        box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    }
+
+/* Feedback op hover */
+.save-btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+}
