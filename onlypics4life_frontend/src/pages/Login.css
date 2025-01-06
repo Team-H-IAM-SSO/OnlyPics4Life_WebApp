@@ -1,20 +1,36 @@
-/* Centrerende styling voor de container */
+/* Login-pagina layout */
 .login-page {
-    height: 100vh; /* Zorgt ervoor dat de pagina de volledige hoogte beslaat */
-    display: flex; /* Gebruik flexbox voor centrering */
-    justify-content: center; /* Horizontale centrering */
-    align-items: center; /* Verticale centrering */
-    background-color: #f5f5f5; /* Achtergrondkleur */
-}
-
-/* Container voor login formulier en knop */
-.login-wrapper {
+    height: 100vh; /* Zorgt voor volledige schermhoogte */
     display: flex;
-    align-items: flex-start; /* Zorgt ervoor dat de knop naast de bovenkant van het formulier staat */
-    gap: 20px; /* Ruimte tussen de knop en het formulier */
+    flex-direction: column; /* Kolomindeling zodat de container en knop gestapeld zijn */
+    justify-content: center; /* Verticaal centreren */
+    align-items: center; /* Horizontaal centreren */
+    background-color: #f5f5f5;
 }
 
-/* Knop naast formulier */
+/* Login container */
+.login-container,
+.id-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Ruimte tussen de container en de knop */
+}
+
+/* Knop onder de container */
+.switch-btn-wrapper {
+    text-align: center; /* Tekst en knop gecentreerd */
+    margin-top: 10px; /* Ruimte boven de tekst */
+}
+
+.switch-btn-text {
+    font-size: 1rem;
+    color: #5e5e5e;
+    margin-bottom: 10px;
+}
+
 .switch-btn {
     background-color: black;
     color: white;
@@ -24,7 +40,6 @@
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
-    align-self: flex-start; /* Zorgt ervoor dat de knop netjes bovenaan blijft */
 }
 
     .switch-btn:hover {
