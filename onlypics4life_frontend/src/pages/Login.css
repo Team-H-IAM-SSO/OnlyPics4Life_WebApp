@@ -1,22 +1,24 @@
 /* Login-pagina layout */
 .login-page {
     height: 100vh; /* Zorgt voor volledige schermhoogte */
-    display: flex;
-    flex-direction: column; /* Kolomindeling zodat de container en knop gestapeld zijn */
-    justify-content: center; /* Verticaal centreren */
-    align-items: center; /* Horizontaal centreren */
+    display: flex; /* Zorgt voor een rij-indeling */
+    flex-direction: row; /* Login en afbeelding naast elkaar */
+    justify-content: center; /* Centeren van de inhoud */
+    align-items: center; /* Horizontaal en verticaal centreren */
     background-color: #f5f5f5;
 }
 
-/* Login container */
-.login-container,
-.id-container {
-    text-align: center;
-    background-color: #ffffff;
+/* Login container wrapper */
+.login-container-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Ruimte tussen de container en de knop */
 }
 
 /* Knop onder de container */
@@ -46,17 +48,13 @@
         background-color: #333; /* Donkerder zwart bij hover */
     }
 
-/* Login-container styling */
+/* Login container styling */
 .login-container,
 .id-container {
     text-align: center;
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-    /* Login container koptekst */
     .login-container h1,
     .id-container h1 {
         margin-bottom: 1rem;
@@ -95,6 +93,23 @@
 /* ID specifieke container */
 .id-container {
     background-color: #f0f8ff; /* Lichtblauwe achtergrond */
+}
+
+/* Afbeeldingscontainer */
+.image-container {
+    flex: 1; /* Zorgt ervoor dat de afbeelding evenveel ruimte neemt */
+    background-color: #000; /* Fallback kleur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorgt dat de afbeelding volledig de container bedekt */
 }
 
 /* Auth0 sectie styling */
