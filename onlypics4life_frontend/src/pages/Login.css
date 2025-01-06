@@ -1,16 +1,14 @@
 /* Login-pagina layout */
 .login-page {
-    height: 100vh; /* Zorgt voor volledige schermhoogte */
+    height: 100vh;
     display: flex; /* Zorgt voor een rij-indeling */
     flex-direction: row; /* Login en afbeelding naast elkaar */
-    justify-content: center; /* Centeren van de inhoud */
-    align-items: center; /* Horizontaal en verticaal centreren */
     background-color: #f5f5f5;
 }
 
 /* Login container wrapper */
 .login-container-wrapper {
-    flex: 1;
+    flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,7 +63,8 @@
 .login-input,
 .id-input {
     display: block;
-    width: 250px;
+    width: 100%; /* Breedte van de inputs aangepast aan container */
+    max-width: 250px;
     margin: 10px auto;
     padding: 10px;
     border: 1px solid #ccc;
@@ -92,24 +91,25 @@
 
 /* ID specifieke container */
 .id-container {
-    background-color: #f0f8ff; /* Lichtblauwe achtergrond */
+    background-color: #ffffff; /* Witte achtergrond */
+    padding: 2rem;
+    border-radius: 8px;
 }
+
 
 /* Afbeeldingscontainer */
 .image-container {
-    flex: 1; /* Zorgt ervoor dat de afbeelding evenveel ruimte neemt */
-    background-color: #000; /* Fallback kleur */
+    flex: 2; /* 40% van de breedte */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 100%;
 }
 
 .background-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Zorgt dat de afbeelding volledig de container bedekt */
+    object-fit: cover;
 }
 
 /* Auth0 sectie styling */
