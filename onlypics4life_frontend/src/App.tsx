@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
-    const [input, setInput] = useState("");
+    const navigate = useNavigate();
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setInput(e.target.value);
-    };
-
-    const handleSubmit = () => {
-        alert(`You entered: ${input}`);
+    const handleGoToLogin = () => {
+        navigate("/login"); 
     };
 
     return (
@@ -28,17 +25,9 @@ function App() {
                 </h1>
                 <p>Your secure solution for sharing and managing photos.</p>
             </header>
-
-            <div className="input-section">
-                <input
-                    type="text"
-                    placeholder="Enter something..."
-                    value={input}
-                    onChange={handleInputChange}
-                    className="input-box"
-                />
-                <button onClick={handleSubmit} className="submit-btn">
-                    Submit
+            <div className="button-section">
+                <button onClick={handleGoToLogin} className="go-to-login-btn">
+                    Go to Login
                 </button>
             </div>
         </div>

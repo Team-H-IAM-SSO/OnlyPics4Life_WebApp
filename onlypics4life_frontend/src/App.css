@@ -69,3 +69,22 @@ header p {
     .submit-btn:hover {
         background-color: #5e5e5e;
     }
+
+.button-section {
+    margin-top: 20px;
+}
+
+.go-to-login-btn {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #7a8c8d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .go-to-login-btn:hover {
+        background-color: #5e5e5e;
+    }
