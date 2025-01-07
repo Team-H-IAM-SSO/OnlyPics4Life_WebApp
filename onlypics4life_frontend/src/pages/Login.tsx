@@ -64,8 +64,8 @@ function Login() {
             </div>
             <div className="image-container">
                 <img
-                    src="/public/depositphotos_114077612-stock-photo-happy-funny-male-photographer-in.jpg"
-                    alt="Photographer"
+                    src="/depositphotos_114077612-stock-photo-happy-funny-male-photographer-in.jpg"
+                    alt="The one piece is real"
                     className="background-image"
                 />
             </div>
