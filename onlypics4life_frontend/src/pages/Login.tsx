@@ -16,7 +16,13 @@ function Login() {
                     'password': password
                 }
             }).then(response => {
-                console.log(response);
+                response.json().then(data => {
+                    if(data.login) {
+                        alert('Login valid !');
+                    } else {
+                        alert('Login Invalid !');
+                    }
+                });
             }).catch(console.error);
         }
     };
