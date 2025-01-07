@@ -4,9 +4,27 @@ import photoGuy from '../assets/stock-guy.jpg';
 
 function Login() {
     const [view, setView] = useState<"login" | "id">("login");
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-        alert("Login submitted!");
+        if(password.trim() !== "" && username.trim() !== "") {
+            fetch('/login-user', {
+                method: 'GET',
+                headers: {
+                    'username': username,
+                    'password': password
+                }
+            }).then(response => {
+                response.json().then(data => {
+                    if(data.login) {
+                        alert('Login valid !');
+                    } else {
+                        alert('Login Invalid !');
+                    }
+                });
+            }).catch(console.error);
+        }
     };
 
     const handleIdSubmit = () => {
@@ -24,13 +42,17 @@ function Login() {
                             type="text"
                             placeholder="Username"
                             className="login-input"
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
                         />
                         <input
                             type="password"
                             placeholder="Password"
                             className="login-input"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
                         />
-                        <button onClick={handleLogin} className="login-btn">
+                        <button onClick={handleLogin} className="login-btn" disabled={password.length === 0 || username.length === 0}>
                             Login
                         </button>
                     </div>
