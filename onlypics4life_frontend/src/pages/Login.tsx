@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import photoGuy from '../assets/stock-guy.jpg';
 
 function Login() {
     const [view, setView] = useState<"login" | "id">("login");
@@ -64,7 +65,7 @@ function Login() {
             </div>
             <div className="image-container">
                 <img
-                    src="/depositphotos_114077612-stock-photo-happy-funny-male-photographer-in.jpg"
+                    src={photoGuy}
                     alt="The one piece is real"
                     className="background-image"
                 />
