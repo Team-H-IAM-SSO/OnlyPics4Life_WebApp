@@ -8,15 +8,17 @@ function Login() {
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-        fetch('/login-user', {
-            method: 'GET',
-            headers: {
-                'username': username,
-                'password': password
-            }
-        }).then(response => {
-            console.log(response);
-        }).catch(console.error);
+        if(password.trim() !== "" && username.trim() !== "") {
+            fetch('/login-user', {
+                method: 'GET',
+                headers: {
+                    'username': username,
+                    'password': password
+                }
+            }).then(response => {
+                console.log(response);
+            }).catch(console.error);
+        }
     };
 
     const handleIdSubmit = () => {
@@ -44,7 +46,7 @@ function Login() {
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                         />
-                        <button onClick={handleLogin} className="login-btn">
+                        <button onClick={handleLogin} className="login-btn" disabled={password.length === 0 || username.length === 0}>
                             Login
                         </button>
                     </div>
